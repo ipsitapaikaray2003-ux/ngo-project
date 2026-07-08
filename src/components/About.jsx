@@ -35,18 +35,22 @@ function About() {
           </h2>
 
           <p>
-            RoshanKal Welfare Foundation is a registered non-profit
-            organization dedicated to empowering individuals and
-            communities through education, healthcare, youth
-            development, women empowerment, environmental awareness
-            and social welfare initiatives.
+            Roshankal Welfare Foundation is a social welfare NGO dedicated to helping people in Kashmir and other parts of India. The organization is officially registered with NITI Aayog and works with the vision of supporting needy and deserving individuals through humanitarian and development initiatives.
+
+Our main aim is to improve the lives of people by providing support in the fields of education, healthcare, social welfare, and community development. We believe that every person deserves equal opportunities, quality education, proper medical care, and a better future.
+
+The foundation actively works to assist students, poor families, patients, and people facing difficulties in society. Through awareness programs, charitable activities, educational support, and health-related initiatives, we strive to bring positive change to communities.
+
+At Roshankal Welfare Foundation, our mission is to serve humanity with honesty, compassion, and dedication, creating hope and opportunities for a brighter tomorrow.
+
+
           </p>
 
           <p>
-            Since 2016, we have been committed to creating positive
+            Since 2025 september, we have been committed to creating positive
             social impact by working with local communities,
             educational institutions and government organizations
-            to improve lives and build a sustainable future.
+            to improve lives and build a sustainable future. 
           </p>
 
           {/* Features */}

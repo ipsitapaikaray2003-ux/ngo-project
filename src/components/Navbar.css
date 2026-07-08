@@ -39,8 +39,8 @@
 }
 
 .logo-img{
-    width:100px;
-    height:100px;
+    width:150px;
+    height:120px;
     object-fit:contain;
     transition:.4s;
 }
