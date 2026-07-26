@@ -1,9 +1,11 @@
 .contact{
-    padding:90px 8%;
+    padding:100px 8%;
     background:#f8f9fc;
 }
 
-/* Heading */
+/* ===========================
+        Heading
+=========================== */
 
 .contact-heading{
     text-align:center;
@@ -11,26 +13,31 @@
 }
 
 .contact-heading span{
+    display:inline-block;
     color:#ff6b35;
     font-size:15px;
     font-weight:700;
     letter-spacing:2px;
+    text-transform:uppercase;
 }
 
 .contact-heading h2{
-    font-size:42px;
-    color:#083b5c;
     margin:15px 0;
+    color:#083b5c;
+    font-size:42px;
 }
 
 .contact-heading p{
-    max-width:700px;
+    max-width:720px;
     margin:auto;
     color:#666;
     line-height:1.8;
+    font-size:16px;
 }
 
-/* Contact Cards */
+/* ===========================
+      Contact Cards
+=========================== */
 
 .contact-cards{
     display:grid;
@@ -45,25 +52,25 @@
     text-align:center;
     border-radius:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
+    transition:.35s;
 }
 
 .contact-card:hover{
     transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
 }
 
 .contact-icon{
     width:70px;
     height:70px;
-    margin:auto;
+    margin:auto auto 20px;
     background:#ff6b35;
     color:#fff;
     border-radius:50%;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     font-size:28px;
-    margin-bottom:20px;
 }
 
 .contact-card h3{
@@ -73,8 +80,8 @@
 }
 
 .contact-link{
-    color:#555;
     text-decoration:none;
+    color:#555;
     font-size:16px;
     font-weight:600;
     transition:.3s;
@@ -85,26 +92,33 @@
     color:#ff6b35;
 }
 
-/* Contact Content */
+/* ===========================
+      Contact Content
+=========================== */
 
 .contact-content{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:40px;
-    align-items:center;
+    align-items:stretch;
 }
 
-/* Map */
+/* ===========================
+          Map
+=========================== */
 
 .contact-left iframe{
     width:100%;
-    height:500px;
+    height:100%;
+    min-height:500px;
     border:none;
     border-radius:18px;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
-/* Form */
+/* ===========================
+          Form
+=========================== */
 
 .contact-right{
     background:#fff;
@@ -131,17 +145,21 @@
     resize:none;
 }
 
+.contact-right textarea{
+    min-height:150px;
+}
+
 .contact-right input:focus,
 .contact-right textarea:focus{
     border-color:#ff6b35;
 }
 
 .contact-right button{
+    border:none;
+    border-radius:40px;
     background:#ff6b35;
     color:#fff;
-    border:none;
     padding:15px;
-    border-radius:40px;
     font-size:16px;
     font-weight:600;
     cursor:pointer;
@@ -152,9 +170,31 @@
     background:#083b5c;
 }
 
-/* Responsive */
+/* ===========================
+      Large Laptop
+=========================== */
 
-@media(max-width:992px){
+@media (max-width:1200px){
+
+.contact-cards{
+    gap:25px;
+}
+
+}
+
+/* ===========================
+          Tablet
+=========================== */
+
+@media (max-width:992px){
+
+.contact{
+    padding:90px 6%;
+}
+
+.contact-heading h2{
+    font-size:36px;
+}
 
 .contact-cards{
     grid-template-columns:1fr;
@@ -162,123 +202,133 @@
 
 .contact-content{
     grid-template-columns:1fr;
+    gap:30px;
 }
 
 .contact-left iframe{
-    height:400px;
+    min-height:400px;
+}
+
+.contact-right{
+    padding:30px;
 }
 
 }
 
-@media(max-width:768px){
+/* ===========================
+          Mobile
+=========================== */
+
+@media (max-width:768px){
 
 .contact{
     padding:70px 5%;
+}
+
+.contact-heading{
+    margin-bottom:45px;
 }
 
 .contact-heading h2{
     font-size:30px;
 }
 
-.contact-card{
-    padding:30px 20px;
-}
-
-.contact-right{
-    padding:25px;
-}
-
-.contact-left iframe{
-    height:300px;
-}
-
-}
-/* ==========================
-   TABLET
-========================== */
-
-@media (max-width:992px){
-
-.about-container,
-.contact-content,
-.leader-box,
-.reverse{
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-}
-
-.footer-container{
-    grid-template-columns:1fr 1fr;
-}
-
-.gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.contact-cards{
-    grid-template-columns:1fr;
-}
-
-.hero-content h1{
-    font-size:42px;
-}
-
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:768px){
-
-section{
-    padding:70px 5%;
-}
-
-h1{
-    font-size:32px !important;
-}
-
-h2{
-    font-size:28px !important;
-}
-
-p{
+.contact-heading p{
     font-size:15px;
 }
 
-.footer-container,
-.gallery-grid,
-.contact-content,
-.contact-cards{
-    grid-template-columns:1fr;
+.contact-card{
+    padding:28px 20px;
 }
 
-.about-container,
-.leader-box,
-.reverse{
-    flex-direction:column;
+.contact-icon{
+    width:60px;
+    height:60px;
+    font-size:24px;
 }
 
-.about-image img,
-.leader-image img{
-    width:100%;
-    max-width:320px;
-    margin:auto;
-    height:auto;
+.contact-card h3{
+    font-size:20px;
+}
+
+.contact-link{
+    font-size:15px;
 }
 
 .contact-left iframe{
-    height:300px;
+    min-height:320px;
 }
 
-.whatsapp{
+.contact-right{
+    padding:24px;
+}
+
+.contact-right input,
+.contact-right textarea{
+    padding:14px;
+}
+
+.contact-right button{
+    width:100%;
+}
+
+}
+
+/* ===========================
+      Small Mobile
+=========================== */
+
+@media (max-width:480px){
+
+.contact{
+    padding:60px 4%;
+}
+
+.contact-heading span{
+    font-size:13px;
+}
+
+.contact-heading h2{
+    font-size:26px;
+}
+
+.contact-heading p{
+    font-size:14px;
+}
+
+.contact-card{
+    padding:24px 18px;
+}
+
+.contact-icon{
     width:55px;
     height:55px;
-    font-size:28px;
-    right:18px;
-    bottom:18px;
+    font-size:22px;
+}
+
+.contact-card h3{
+    font-size:18px;
+}
+
+.contact-link{
+    font-size:14px;
+}
+
+.contact-left iframe{
+    min-height:260px;
+}
+
+.contact-right{
+    padding:20px;
+}
+
+.contact-right input,
+.contact-right textarea{
+    font-size:14px;
+}
+
+.contact-right button{
+    font-size:15px;
 }
 
 }

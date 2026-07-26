@@ -5,22 +5,24 @@
 .donation-modal-overlay{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.65);
-    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(8px);
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:9999;
-    animation:fadeIn .35s ease;
     padding:20px;
+    animation:fadeIn .35s ease;
 }
 
 .donation-modal{
     width:100%;
-    max-width:500px;
+    max-width:520px;
+    max-height:90vh;
+    overflow-y:auto;
     background:#fff;
-    border-radius:24px;
-    padding:45px 35px;
+    border-radius:22px;
+    padding:40px 35px;
     text-align:center;
     position:relative;
     box-shadow:0 25px 60px rgba(0,0,0,.25);
@@ -29,13 +31,14 @@
 
 .donation-close{
     position:absolute;
-    top:18px;
-    right:18px;
+    top:16px;
+    right:16px;
     width:42px;
     height:42px;
     border:none;
     border-radius:50%;
-    background:#f3f3f3;
+    background:#f2f2f2;
+    color:#333;
     cursor:pointer;
     font-size:18px;
     transition:.3s;
@@ -47,45 +50,45 @@
 }
 
 .donation-heart{
-    width:85px;
-    height:85px;
-    margin:auto;
+    width:80px;
+    height:80px;
+    margin:0 auto 20px;
     border-radius:50%;
     background:#ff6b35;
     color:#fff;
     display:flex;
-    justify-content:center;
     align-items:center;
-    font-size:36px;
-    margin-bottom:20px;
+    justify-content:center;
+    font-size:34px;
     box-shadow:0 10px 30px rgba(255,107,53,.35);
 }
 
 .donation-modal h2{
     color:#0b4f6c;
-    font-size:34px;
-    margin-bottom:12px;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
 .donation-modal p{
     color:#666;
-    line-height:1.7;
-    margin-bottom:30px;
+    font-size:16px;
+    line-height:1.8;
+    margin-bottom:25px;
 }
 
 .donation-amounts{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:15px;
-    margin-bottom:25px;
+    margin-bottom:22px;
 }
 
 .donation-amounts button{
-    padding:16px;
     border:none;
+    padding:15px;
     border-radius:14px;
-    background:#f5f5f5;
-    font-size:18px;
+    background:#f4f4f4;
+    font-size:17px;
     font-weight:700;
     cursor:pointer;
     transition:.3s;
@@ -99,13 +102,13 @@
 
 .donation-modal input{
     width:100%;
-    padding:16px;
-    border:2px solid #eee;
+    padding:15px;
+    border:2px solid #ececec;
     border-radius:14px;
     font-size:16px;
     outline:none;
-    margin-bottom:25px;
     transition:.3s;
+    margin-bottom:22px;
 }
 
 .donation-modal input:focus{
@@ -114,12 +117,12 @@
 
 .donation-pay-btn{
     width:100%;
-    padding:17px;
+    padding:16px;
     border:none;
     border-radius:14px;
     background:#0b4f6c;
     color:#fff;
-    font-size:18px;
+    font-size:17px;
     font-weight:700;
     cursor:pointer;
     transition:.35s;
@@ -127,67 +130,195 @@
 
 .donation-pay-btn:hover{
     background:#ff6b35;
-    transform:translateY(-3px);
+    transform:translateY(-2px);
 }
 
 @keyframes popup{
-
     from{
         opacity:0;
-        transform:scale(.8);
+        transform:scale(.85);
     }
-
     to{
         opacity:1;
         transform:scale(1);
     }
-
 }
 
 @keyframes fadeIn{
-
     from{
         opacity:0;
     }
-
     to{
         opacity:1;
     }
-
 }
-
 /* ===============================
-   MOBILE
+      TABLET RESPONSIVE
 ================================= */
 
-@media(max-width:768px){
+@media (max-width:992px){
+
+.donation-modal-overlay{
+    padding:18px;
+}
 
 .donation-modal{
-    padding:35px 22px;
+    max-width:480px;
+    padding:35px 28px;
+}
+
+.donation-heart{
+    width:75px;
+    height:75px;
+    font-size:32px;
 }
 
 .donation-modal h2{
     font-size:28px;
 }
 
+.donation-modal p{
+    font-size:15px;
+}
+
+.donation-amounts button{
+    padding:14px;
+    font-size:16px;
+}
+
+.donation-modal input{
+    padding:14px;
+    font-size:15px;
+}
+
+.donation-pay-btn{
+    padding:15px;
+    font-size:16px;
+}
+
+}
+
+/* ===============================
+      MOBILE RESPONSIVE
+================================= */
+
+@media (max-width:768px){
+
+.donation-modal-overlay{
+    padding:15px;
+}
+
+.donation-modal{
+    width:100%;
+    max-width:100%;
+    max-height:92vh;
+    border-radius:18px;
+    padding:28px 20px;
+}
+
+.donation-close{
+    width:38px;
+    height:38px;
+    top:12px;
+    right:12px;
+    font-size:16px;
+}
+
 .donation-heart{
-    width:70px;
-    height:70px;
-    font-size:30px;
+    width:65px;
+    height:65px;
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.donation-modal h2{
+    font-size:24px;
+}
+
+.donation-modal p{
+    font-size:14px;
+    margin-bottom:20px;
 }
 
 .donation-amounts{
     grid-template-columns:1fr 1fr;
-    gap:12px;
+    gap:10px;
 }
 
 .donation-amounts button{
-    font-size:16px;
-    padding:14px;
+    padding:12px;
+    font-size:15px;
+}
+
+.donation-modal input{
+    padding:13px;
+    font-size:15px;
 }
 
 .donation-pay-btn{
-    font-size:17px;
+    padding:14px;
+    font-size:15px;
 }
 
+}
+
+/* ===============================
+      SMALL MOBILE
+================================= */
+
+@media (max-width:480px){
+
+.donation-modal{
+    padding:22px 16px;
+}
+
+.donation-heart{
+    width:58px;
+    height:58px;
+    font-size:24px;
+}
+
+.donation-modal h2{
+    font-size:22px;
+}
+
+.donation-modal p{
+    font-size:13px;
+    line-height:1.7;
+}
+
+.donation-amounts{
+    grid-template-columns:1fr;
+}
+
+.donation-amounts button{
+    width:100%;
+    padding:13px;
+}
+
+.donation-modal input{
+    font-size:14px;
+}
+
+.donation-pay-btn{
+    font-size:15px;
+}
+
+}
+
+/* ===============================
+      SCROLLBAR
+================================= */
+
+.donation-modal::-webkit-scrollbar{
+    width:6px;
+}
+
+.donation-modal::-webkit-scrollbar-thumb{
+    background:#ff6b35;
+    border-radius:10px;
+}
+
+.donation-modal::-webkit-scrollbar-track{
+    background:#f2f2f2;
 }

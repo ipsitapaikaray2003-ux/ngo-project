@@ -1,122 +1,115 @@
 import "./About.css";
-import aboutImg from "../assets/about.avif";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import aboutTop from "../assets/about-top.png";
+import aboutMain from "../assets/about-main.png";
+import aboutBottom from "../assets/about-bottom.png";
 
 function About() {
-
-  const navigate = useNavigate();
-
   return (
-    <section className="about" id="about" data-aos="fade-up">
-
+    <section className="about" id="about">
       <div className="about-container">
 
-        {/* Left Image */}
+        {/* Left Images */}
 
         <div className="about-image" data-aos="fade-right">
+
           <img
-            src={aboutImg}
-            alt="About RoshanKal Welfare Foundation"
+            src={aboutTop}
+            alt="Education Initiative"
+            className="about-small"
           />
+
+          <img
+            src={aboutMain}
+            alt="Roshankal Welfare Foundation"
+            className="about-main"
+          />
+
+          <img
+            src={aboutBottom}
+            alt="Community Support"
+            className="about-small"
+          />
+
         </div>
 
         {/* Right Content */}
 
-        <div className="about-content" data-aos="fade-left">
+        <div
+          className="about-content"
+          data-aos="fade-left"
+        >
 
-          <span className="section-title">
-            ABOUT US
-          </span>
+          <span>ABOUT US</span>
 
-          <h2>
-            Empowering Communities
-            <br />
-            Building a Better Tomorrow
-          </h2>
+          <h2>Empowering Communities, Creating Lasting Change</h2>
 
           <p>
-            Roshankal Welfare Foundation is a social welfare NGO dedicated to helping people in Kashmir and other parts of India. The organization is officially registered with NITI Aayog and works with the vision of supporting needy and deserving individuals through humanitarian and development initiatives.
-
-Our main aim is to improve the lives of people by providing support in the fields of education, healthcare, social welfare, and community development. We believe that every person deserves equal opportunities, quality education, proper medical care, and a better future.
-
-The foundation actively works to assist students, poor families, patients, and people facing difficulties in society. Through awareness programs, charitable activities, educational support, and health-related initiatives, we strive to bring positive change to communities.
-
-At Roshankal Welfare Foundation, our mission is to serve humanity with honesty, compassion, and dedication, creating hope and opportunities for a brighter tomorrow.
-
-
+            <strong>Roshankal Welfare Foundation</strong> is a registered
+            <strong> Section 8 non-profit organization</strong> committed to
+            creating meaningful and lasting social impact through compassion,
+            innovation, and community-driven development.
           </p>
 
           <p>
-            Since 2025 september, we have been committed to creating positive
-            social impact by working with local communities,
-            educational institutions and government organizations
-            to improve lives and build a sustainable future. 
+            Established on <strong>29 September 2025</strong>, the Foundation
+            works to empower individuals and strengthen communities by
+            promoting education, healthcare, women empowerment, youth
+            development, environmental sustainability, and humanitarian
+            assistance.
           </p>
 
-          {/* Features */}
+          <p>
+            Headquartered in the picturesque border region of
+            <strong> Tangdhar, Karnah, District Kupwara, Jammu & Kashmir</strong>,
+            we believe every individual—regardless of geography, gender, or
+            economic background—deserves equal access to opportunities that
+            foster dignity, self-reliance, and a better quality of life.
+          </p>
 
-          <div className="features">
+          <p>
+            Our initiatives address real community needs through sustainable
+            solutions, strategic partnerships, and active public participation.
+            We envision a society where education inspires change, healthcare
+            reaches every doorstep, women and youth become leaders of progress,
+            and communities thrive through collective action.
+          </p>
 
-            <div
-              className="feature-card"
-              data-aos="zoom-in"
-            >
-              <h3>🎓 Education</h3>
+          <p>
+            Guided by the principles of
+            <strong> Integrity, Transparency, Accountability,</strong> and
+            <strong> Service</strong>, every initiative is implemented with
+            professionalism and responsibility. The Foundation is recognized
+            under the provisions of the Companies Act, 2013, and has obtained
+            <strong> Section 12AB Registration</strong> and
+            <strong> Section 80G Approval</strong> under the Income Tax Act,
+            enabling us to serve society with credibility and encourage
+            charitable giving.
+          </p>
 
-              <p>
-                Quality education and skill development
-                for youth and children.
-              </p>
+          <p>
+            By collaborating with government institutions, educational
+            organizations, corporate partners, volunteers, and civil society,
+            we strive to build a future where hope transforms into opportunity
+            and opportunity transforms into lasting progress.
+          </p>
 
-            </div>
+          <blockquote className="about-quote">
+            "Together, we are committed to building stronger communities,
+            empowering lives, and creating a brighter future for generations to
+            come."
+          </blockquote>
 
-            <div
-              className="feature-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <h3>👩 Women Empowerment</h3>
-
-              <p>
-                Supporting women through vocational
-                training and self-employment.
-              </p>
-
-            </div>
-
-            <div
-              className="feature-card"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <h3>🌱 Environment</h3>
-
-              <p>
-                Tree plantation, awareness campaigns
-                and sustainable development.
-              </p>
-
-            </div>
-
-          </div>
-
-          {/* Learn More Button */}
-
-          <div className="about-btn-box">
-
-            <button
-              className="about-btn"
-              onClick={() => navigate("/leadership")}
-            >
+          <Link to="/leadership">
+            <button className="about-btn">
               Learn More →
             </button>
-
-          </div>
+          </Link>
 
         </div>
 
       </div>
-
     </section>
   );
 }

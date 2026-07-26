@@ -42,7 +42,7 @@ function Hero() {
         >
 
           <span>
-            Empowering Communities Since 2016
+            Empowering Communities Since 2013
           </span>
 
           <h1>

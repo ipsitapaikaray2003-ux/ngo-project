@@ -1,143 +1,262 @@
+/*==================================
+            ABOUT
+==================================*/
+
 .about{
-    padding:90px 8%;
+    padding:120px 8%;
     background:#f8f9fc;
 }
 
 .about-container{
+    max-width:1400px;
+    margin:auto;
     display:flex;
-    align-items:center;
-    gap:60px;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:70px;
 }
+
+/*==================================
+          LEFT IMAGES
+==================================*/
 
 .about-image{
-    flex:1.2;
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.about-image img{
-    width:100%;
-    height:650px;
-    object-fit:cover;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+.about-small,
+.about-main{
+    width: 100%;
+    height: 320px;      /* Pehle 260px tha */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    transition: 0.35s ease;
 }
+
+.about-small:hover,
+.about-main:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+/*==================================
+        RIGHT CONTENT
+==================================*/
 
 .about-content{
-    flex:1;
+    flex:0 0 58%;
 }
 
-.section-title{
+.about-content span{
+    display:inline-block;
+    padding:8px 18px;
+    background:#fff2eb;
     color:#ff6b35;
-    font-size:15px;
+    font-size:14px;
     font-weight:700;
     letter-spacing:2px;
-    display:inline-block;
-    margin-bottom:12px;
+    text-transform:uppercase;
+    border-radius:50px;
+    margin-bottom:18px;
 }
 
 .about-content h2{
     font-size:42px;
     color:#083b5c;
-    margin-bottom:20px;
     line-height:1.3;
+    margin-bottom:22px;
 }
 
 .about-content p{
     color:#555;
+    font-size:16px;
     line-height:1.9;
     margin-bottom:18px;
-    font-size:16px;
 }
 
-.features{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:18px;
-    margin:35px 0;
-}
-
-.feature-card{
-    background:#fff;
-    padding:22px;
-    border-radius:15px;
-    transition:.3s;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.feature-card:hover{
-    transform:translateY(-8px);
-}
-
-.feature-card h3{
+.about-content strong{
     color:#083b5c;
-    margin-bottom:10px;
-    font-size:20px;
 }
 
-.feature-card p{
-    margin:0;
-}
+.about-quote{
 
-/* ==========================
-   BUTTON
-========================== */
-
-.about-btn-box{
     margin-top:35px;
+
+    padding:25px;
+
+    background:#fff;
+
+    border-left:5px solid #ff6b35;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    font-size:18px;
+
+    font-style:italic;
+
+    color:#083b5c;
+
+    line-height:1.8;
+
 }
 
 .about-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:35px;
+
+    padding:15px 34px;
+
     background:#ff6b35;
+
     color:#fff;
+
     border:none;
-    padding:15px 36px;
+
     border-radius:50px;
-    font-size:16px;
-    font-weight:600;
+
+    text-decoration:none;
+
     cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
     transition:.3s;
+
 }
 
 .about-btn:hover{
+
     background:#083b5c;
+
     transform:translateY(-3px);
+
+}
+/*==================================
+        RESPONSIVE
+==================================*/
+
+/* -------- Laptop -------- */
+
+@media (max-width:1200px){
+
+.about{
+    padding:100px 6%;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+.about-container{
+    gap:50px;
+}
 
-@media(max-width:992px){
+.about-image{
+    flex:0 0 40%;
+}
+
+.about-small,
+.about-main{
+    height: 300px;
+}
+
+.about-content{
+    flex:0 0 56%;
+}
+
+.about-content h2{
+    font-size:36px;
+}
+
+.about-content p{
+    font-size:15px;
+}
+
+}
+
+/* -------- Tablet -------- */
+
+@media (max-width:992px){
+
+.about{
+    padding:90px 6%;
+}
 
 .about-container{
     flex-direction:column;
+    gap:45px;
 }
 
 .about-image{
     width:100%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
 }
 
-.about-image img{
-    height:450px;
+.about-small,
+.about-main{
+    width:100%;
+    height:280px;
 }
 
 .about-content{
     width:100%;
+    text-align:center;
 }
 
 .about-content h2{
     font-size:34px;
 }
 
+.about-content p{
+    font-size:16px;
 }
 
-@media(max-width:768px){
+.about-quote{
+    font-size:17px;
+}
+
+.about-btn{
+    margin:auto;
+}
+
+}
+
+/* -------- Mobile -------- */
+
+@media (max-width:768px){
 
 .about{
     padding:70px 5%;
 }
 
-.about-image img{
-    height:320px;
+.about-container{
+    gap:35px;
+}
+
+.about-image{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.about-small,
+.about-main{
+    width:100%;
+    height:240px;
 }
 
 .about-content h2{
@@ -148,102 +267,48 @@
     font-size:15px;
 }
 
-.feature-card{
+.about-quote{
+    font-size:16px;
+    padding:20px;
+}
+
+.about-btn{
+    width:100%;
+    justify-content:center;
+}
+
+}
+
+/* -------- Small Mobile -------- */
+
+@media (max-width:480px){
+
+.about{
+    padding:60px 4%;
+}
+
+.about-small,
+.about-main{
+    height:200px;
+}
+
+.about-content h2{
+    font-size:24px;
+}
+
+.about-content p{
+    font-size:14px;
+}
+
+.about-quote{
+    font-size:15px;
     padding:18px;
 }
 
 .about-btn{
     width:100%;
-    padding:15px;
-}
-
-}
-/* ==========================
-   TABLET
-========================== */
-
-@media (max-width:992px){
-
-.about-container,
-.contact-content,
-.leader-box,
-.reverse{
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-}
-
-.footer-container{
-    grid-template-columns:1fr 1fr;
-}
-
-.gallery-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.contact-cards{
-    grid-template-columns:1fr;
-}
-
-.hero-content h1{
-    font-size:42px;
-}
-
-}
-
-/* ==========================
-   MOBILE
-========================== */
-
-@media(max-width:768px){
-
-section{
-    padding:70px 5%;
-}
-
-h1{
-    font-size:32px !important;
-}
-
-h2{
-    font-size:28px !important;
-}
-
-p{
+    padding:14px;
     font-size:15px;
-}
-
-.footer-container,
-.gallery-grid,
-.contact-content,
-.contact-cards{
-    grid-template-columns:1fr;
-}
-
-.about-container,
-.leader-box,
-.reverse{
-    flex-direction:column;
-}
-
-.about-image img,
-.leader-image img{
-    width:100%;
-    max-width:320px;
-    margin:auto;
-    height:auto;
-}
-
-.contact-left iframe{
-    height:300px;
-}
-
-.whatsapp{
-    width:55px;
-    height:55px;
-    font-size:28px;
-    right:18px;
-    bottom:18px;
 }
 
 }

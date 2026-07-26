@@ -7,6 +7,7 @@ import anjum from "../assets/anjum-saleem.png";
 import omar from "../assets/omar-chuk.png";
 import snober from "../assets/snober-bashir.png";
 import waqar from "../assets/waqar-ahmad.png";
+import salma from "../assets/salma-saleem.png";
 
 function Leadership() {
   const navigate = useNavigate();
@@ -209,8 +210,41 @@ function Leadership() {
   <div className="leader-image">
     <img src={waqar} alt="Waqar Ahmad" />
   </div>
+  </div>
+  {/* Salma Saleem */}
+
+<div className="leader-box">
+
+  <div className="leader-image">
+    <img src={salma} alt="Salma Saleem" />
+  </div>
+
+  <div className="leader-info">
+
+    <h2>Salma Saleem</h2>
+
+    <h4>Finance & Accounts Officer</h4>
+
+    <p>
+      Salma Saleem manages the financial records, budgeting,
+      bookkeeping, expense tracking, fund utilization and financial
+      reporting of RoshanKal Welfare Foundation. She ensures
+      transparency, accountability and efficient financial management
+      across all organizational activities.
+    </p>
+
+    <p>
+      She also oversees compliance with financial policies, supports
+      grant and donation management, prepares financial reports and
+      contributes to the Foundation's mission by ensuring responsible
+      utilization of resources for sustainable community development.
+    </p>
+
+  </div>
 
 </div>
+
+
 
       <div className="back-btn-box">
 
