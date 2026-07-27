@@ -54,11 +54,11 @@ function Impact() {
 
       <div className="impact-container">
 
-        <Counter end={5000} text="Lives Impacted" />
+        <Counter end={ 100} text="Lives Impacted" />
 
         <Counter end={100} text="Volunteers" />
 
-        <Counter end={50} text="Projects Completed" />
+        <Counter end={10} text="Projects Completed" />
 
         <Counter end={8} text="Years of Service" />
 
