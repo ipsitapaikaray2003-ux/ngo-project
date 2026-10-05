@@ -8,8 +8,8 @@ import omar from "../assets/omar-chuk.png";
 import snober from "../assets/snober-bashir.png";
 import waqar from "../assets/waqar-ahmad.png";
 import salma from "../assets/salma-saleem.png";
-import zahoor from "../assets/zahoor-ahmad.png";
-import obaid from "../assets/obaid-ayoob.png";
+import zahoor from "../assets/zahoor-ahmad.jpg";
+import obaid from "../assets/obaid-ayoob.jpg";
 
 function Leadership() {
   const navigate = useNavigate();
