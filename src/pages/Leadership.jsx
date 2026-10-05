@@ -8,6 +8,8 @@ import omar from "../assets/omar-chuk.png";
 import snober from "../assets/snober-bashir.png";
 import waqar from "../assets/waqar-ahmad.png";
 import salma from "../assets/salma-saleem.png";
+import zahoor from "../assets/zahoor-ahmad.png";
+import obaid from "../assets/obaid-ayoob.png";
 
 function Leadership() {
   const navigate = useNavigate();
@@ -238,6 +240,78 @@ function Leadership() {
       grant and donation management, prepares financial reports and
       contributes to the Foundation's mission by ensuring responsible
       utilization of resources for sustainable community development.
+    </p>
+
+  </div>
+
+</div>
+
+{/* Zahoor Ahmad Lone */}
+
+<div className="leader-box reverse">
+
+  <div className="leader-info">
+
+    <h2>Zahoor Ahmad Lone</h2>
+
+    <h4>Field Coordinator</h4>
+
+    <p>
+      Zahoor Ahmad Lone brings with him around 10 years of experience in
+      social work and community engagement. Before taking up this role, he
+      worked as a social activist and remained associated with various
+      organisations, contributing to community-focused initiatives and
+      public outreach activities. Over the past decade, he has gained
+      experience in field coordination, community interaction, and grassroots
+      engagement.
+    </p>
+
+    <p>
+      In his new role as Field Coordinator, Zahoor is responsible for
+      supporting field-level activities, coordinating with communities and
+      stakeholders, and facilitating the effective implementation of
+      organisational programmes. With his field experience and understanding
+      of grassroots communities, he is expected to contribute to strengthening
+      outreach and coordination at the ground level.
+    </p>
+
+  </div>
+
+  <div className="leader-image">
+    <img src={zahoor} alt="Zahoor Ahmad Lone" />
+  </div>
+
+</div>
+
+{/* Obaid Ayoob */}
+
+<div className="leader-box">
+
+  <div className="leader-image">
+    <img src={obaid} alt="Obaid Ayoob" />
+  </div>
+
+  <div className="leader-info">
+
+    <h2>Obaid Ayoob</h2>
+
+    <h4>Project Coordinator</h4>
+
+    <p>
+      Obaid Ayoob has been appointed as Project Coordinator, where he will
+      oversee and support the planning, coordination, and implementation of
+      various organisational projects. In this role, he will work closely with
+      team members, field coordinators, partner organisations, and community
+      stakeholders to ensure the smooth execution of projects and timely
+      completion of assigned activities.
+    </p>
+
+    <p>
+      His responsibilities include project planning, team coordination,
+      field-level monitoring, documentation, stakeholder communication, and
+      progress reporting. As Project Coordinator, Obaid Ayoob will contribute to
+      strengthening organisational programmes and ensuring effective
+      implementation of initiatives at the grassroots level.
     </p>
 
   </div>
